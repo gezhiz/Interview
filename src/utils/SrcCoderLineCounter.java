@@ -1,6 +1,6 @@
 package utils;
 
-import main.CoderLineCounter;
+import domain.CoderLineCounter;
 
 import java.io.*;
 
