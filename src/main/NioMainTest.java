@@ -11,7 +11,7 @@ import java.nio.channels.Selector;
 /**
  * Created by gezz on 2017/8/12.
  */
-public class NioMainClass {
+public class NioMainTest {
 
     @Test
     public void testReadFile() {

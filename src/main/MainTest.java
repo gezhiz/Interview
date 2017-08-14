@@ -8,7 +8,7 @@ import java.io.*;
 /**
  * Created by gezz on 2017/8/1.
  */
-public class MainClass {
+public class MainTest {
     /**gasgseg**/
     @Test
 
