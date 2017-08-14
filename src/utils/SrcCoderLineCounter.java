@@ -32,7 +32,10 @@ public class SrcCoderLineCounter {
             while ((lineStr = lineReader.readLine()) != null) {
                 //替换所有空行
                 lineStr = lineStr.trim();
-//                lineStr.replaceAll("\\s*|\\t|\\r|\\n","");
+//                lineStr.replaceAll("\\s*|\\t|\r|\n","");
+//                Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+//                Matcher m = p.matcher(lineStr);
+//                lineStr = m.replaceAll("");
                 if (0 == lineStr.length()) {
                     counter.setSpaceCount(counter.getSpaceCount() + 1);
                     continue;

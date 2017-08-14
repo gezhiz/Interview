@@ -1,0 +1,67 @@
+package utils;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.nio.channels.FileChannel;
+
+/**
+ * Created by gezz on 2017/8/13.
+ */
+public class TransformUtils {
+
+    public static void transformFile(String fromPath, String toPath) {
+        try {
+            RandomAccessFile from = new RandomAccessFile(fromPath,"rw");
+            RandomAccessFile to = new RandomAccessFile(toPath, "rw");
+            FileChannel fromChannel = from.getChannel();
+            FileChannel toChannel = to.getChannel();
+            int position = 0;
+            long count = fromChannel.size();//文件字节书
+            toChannel.transferFrom(fromChannel,position,count);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+
+class NioReadFileUtil {
+    public static void readFile(String filePath) {
+        FileInputStream fileInputStream = null;
+        try {
+            File file = new File(filePath);
+            if (!file.isFile()) {
+                throw new IllegalArgumentException("参数错误");
+            }
+            fileInputStream = new FileInputStream(filePath);
+            FileChannel fileChannel = fileInputStream.getChannel();
+            ByteBuffer byteBuffer = ByteBuffer.allocate(1024);//分配1024个字节的ByteBuffer
+            while (true) {
+                byteBuffer.clear();//进入写模式，limit到达capacity
+                int len = fileChannel.read(byteBuffer);
+                if (len == -1) {
+                    break;
+                }
+                byteBuffer.flip();//进入读模式,limit会被设定为当前的position，position从0开始
+//                while(byteBuffer.hasRemaining()) {
+//                    System.out.print((char)byteBuffer.get());//get方法会自动把position往后移动
+//                }
+                System.out.print(new String(byteBuffer.array(),0 ,byteBuffer.limit()));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------
