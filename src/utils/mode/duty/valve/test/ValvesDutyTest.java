@@ -1,11 +1,11 @@
 package utils.mode.duty.valve.test;
 
 import org.junit.Test;
-import utils.mode.duty.valve.container.Engine;
-import utils.mode.duty.valve.container.Host;
+import utils.mode.duty.valve.container.impl.Engine;
+import utils.mode.duty.valve.container.impl.Host;
 import utils.mode.duty.valve.domain.DutyBean;
-import utils.mode.duty.valve.valves.StandardEngineValve;
-import utils.mode.duty.valve.valves.StandardHostValve;
+import utils.mode.duty.valve.valves.impl.StandardEngineValve;
+import utils.mode.duty.valve.valves.impl.StandardHostValve;
 import utils.mode.duty.valve.valves.Valve;
 import utils.mode.duty.valve.valves.ValveContext;
 

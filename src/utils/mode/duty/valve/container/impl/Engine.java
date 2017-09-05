@@ -1,5 +1,7 @@
-package utils.mode.duty.valve.container;
+package utils.mode.duty.valve.container.impl;
 
+import utils.mode.duty.valve.container.Container;
+import utils.mode.duty.valve.container.ContainerBase;
 import utils.mode.duty.valve.valves.Pipeline;
 import utils.mode.duty.valve.domain.DutyBean;
 
@@ -10,7 +12,7 @@ import java.util.Map;
  */
 public class Engine extends ContainerBase implements Pipeline, Container {
 
-    Host mapper(DutyBean dutyBean) {
+    public Host mapper(DutyBean dutyBean) {
         Map<String,Container> children = getChildren();
         for (Map.Entry child : children.entrySet()) {
             if (child.getValue() instanceof Host) {
