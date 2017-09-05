@@ -58,6 +58,8 @@ public class ValvesDutyTest {
         context.addChild(wrapper);
         host.addChild(context);
         engine.addChild(host);
+
+        //请求责任链入口，以此会执行host，context，wrapper的责任链节点（Pipeline）和对应的阀门（Valve）
         engine.invoke(new DutyBean("valveType"));
     }
 }
