@@ -19,7 +19,7 @@ public class FilterChainFactory {
             @Override
             public void doFilter(DutyBean dutyBean, FilterChain filterChain) {
                 System.out.println("Filter1 executed doFilter before !");
-//                filterChain.doFilter(dutyBean);//如果没有调用链路的doFilter,则后续的过滤器将不会得到执行
+                filterChain.doFilter(dutyBean);//如果没有调用链路的doFilter,则后续的过滤器将不会得到执行
                 System.out.println("Filter1 executed doFilter after !");
             }
         });
