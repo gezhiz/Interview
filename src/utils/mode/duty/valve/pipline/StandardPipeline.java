@@ -2,7 +2,6 @@ package utils.mode.duty.valve.pipline;
 
 import utils.mode.duty.valve.container.Container;
 import utils.mode.duty.valve.domain.DutyBean;
-import utils.mode.duty.valve.pipline.Pipeline;
 import utils.mode.duty.valve.valves.Valve;
 import utils.mode.duty.valve.valves.ValveContext;
 
@@ -13,7 +12,7 @@ import utils.mode.duty.valve.valves.ValveContext;
 public class StandardPipeline implements Pipeline {
     private Container container;
     protected Valve valves[] = new Valve[0];
-    protected  Valve basicValve = null;
+    protected  Valve basicValve = null;//基本阀门，处理业务逻辑，并且能够有效的找到下一个责任节点
 
     public StandardPipeline(Container container) {
         this.container = container;
