@@ -1,8 +1,8 @@
 package main;
 
 import org.junit.Test;
-import utils.NioReadFileUtils;
-import utils.TransformUtils;
+import utils.nio.NioReadFileUtils;
+import utils.nio.TransformUtils;
 
 import java.io.IOException;
 import java.nio.channels.SelectionKey;

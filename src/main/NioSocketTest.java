@@ -1,7 +1,7 @@
 package main;
 
 import org.junit.Test;
-import utils.NioSocketUtils;
+import utils.nio.NioSocketUtils;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

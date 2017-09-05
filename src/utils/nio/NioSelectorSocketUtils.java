@@ -1,9 +1,10 @@
-package utils;
+package utils.nio;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.List;
 /**
  * Created by gezz on 2017/8/14.
  */
-public class NioSocketUtils {
+public class NioSelectorSocketUtils {
 
     public static void server(int portNumber) {
         try {
@@ -20,17 +21,18 @@ public class NioSocketUtils {
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
             serverSocketChannel.socket().bind(socketAddress);
             serverSocketChannel.configureBlocking(false);
-            while (true) {
-                SocketChannel socketChannel = serverSocketChannel.accept();
-                if (socketChannel != null) {
-                    ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-                    byte[] bytes = new String("strings from nio server!").getBytes();
-                    byteBuffer.put(bytes);
-                    byteBuffer.flip();
-                    socketChannel.write(byteBuffer);
-                    socketChannel.close();
-                }
-            }
+            Selector selector = Selector.open();
+//            while (true) {
+//                SocketChannel socketChannel = serverSocketChannel.accept();
+//                if (socketChannel != null) {
+//                    ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+//                    byte[] bytes = new String("strings from nio server!").getBytes();
+//                    byteBuffer.put(bytes);
+//                    byteBuffer.flip();
+//                    socketChannel.write(byteBuffer);
+//                    socketChannel.close();
+//                }
+//            }
         } catch (IOException e) {
             e.printStackTrace();
         }

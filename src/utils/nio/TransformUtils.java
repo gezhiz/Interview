@@ -1,4 +1,4 @@
-package utils;
+package utils.nio;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
