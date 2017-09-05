@@ -20,7 +20,7 @@ public class NioSelectorSocketUtils {
             SocketAddress socketAddress = new InetSocketAddress(portNumber);
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
             serverSocketChannel.socket().bind(socketAddress);
-            serverSocketChannel.configureBlocking(false);
+            serverSocketChannel.configureBlocking(false);//非阻塞
             Selector selector = Selector.open();
 //            while (true) {
 //                SocketChannel socketChannel = serverSocketChannel.accept();
