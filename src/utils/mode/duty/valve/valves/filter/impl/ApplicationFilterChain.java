@@ -31,6 +31,9 @@ public final class ApplicationFilterChain implements FilterChain {
             // 过滤链会在第一个过滤器的doFilter方法执行完成后return，从而是的递归调用终止
             return;
         }
+        //链路的最后一个Filter执行了doFilter之后，没有了更多的Filter,
+        // 会跳出上面的while循环，然后会执行下面的代码，接着返回给上一个Filter，
+        //最终回到第一个Filter的doFilter方法返回，然后在while循环中执行"return;",FilterChain的doFilter就运行结束了。
         if (servlet != null) {
             servlet.service(dutyBean.getRequest(),dutyBean.getResponse());
         }
