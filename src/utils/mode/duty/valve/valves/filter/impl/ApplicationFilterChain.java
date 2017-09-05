@@ -1,9 +1,9 @@
-package utils.mode.duty.valve.valves.impl;
+package utils.mode.duty.valve.valves.filter.impl;
 
 import utils.mode.duty.valve.domain.DutyBean;
 import utils.mode.duty.valve.domain.Servlet;
-import utils.mode.duty.valve.valves.Filter;
-import utils.mode.duty.valve.valves.FilterChain;
+import utils.mode.duty.valve.valves.filter.Filter;
+import utils.mode.duty.valve.valves.filter.FilterChain;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package utils.mode.duty.valve.valves;
+package utils.mode.duty.valve.valves.filter;
 
 import utils.mode.duty.valve.domain.DutyBean;
 
