@@ -16,6 +16,8 @@ public class Engine extends ContainerBase implements Pipeline, Container {
         Map<String,Container> children = getChildren();
         for (Map.Entry child : children.entrySet()) {
             if (child.getValue() instanceof Host) {
+                //简单起见，此处直接使用了Engine的孩子container中的Host，
+                // 一般来说，需要根据dutyBean对象的结果判定选择哪个Host
                 return ((Host) child.getValue());
             }
         }

@@ -1,6 +1,7 @@
 package utils.mode.duty.valve.domain;
 
 /**
+ * 责任链处理的对象
  * Created by gezz on 2017/9/1.
  */
 public class DutyBean {

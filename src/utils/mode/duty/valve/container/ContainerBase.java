@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 容器类的基类
  * Created by gezz on 2017/9/1.
  */
 public abstract class ContainerBase implements Pipeline, Container {

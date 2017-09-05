@@ -7,6 +7,7 @@ import utils.mode.duty.valve.valves.Valve;
 import utils.mode.duty.valve.valves.ValveContext;
 
 /**
+ * 标准管道类，实现责任链的核心类
  * Created by gezz on 2017/9/5.
  */
 public class StandardPipeline implements Pipeline {
@@ -76,6 +77,10 @@ public class StandardPipeline implements Pipeline {
         this.basicValve = basicValve;
     }
 
+    /**
+     * 阀门上下文，用来执行所有当前责任链节点（Pipeline）的所有阀门，
+     * 最后执行基本阀门，可以把当前节点（Pipeline）处理的对象传给下一个节点（Pipeline）
+     */
     protected class StandardPipelineValveContext implements ValveContext {
         private int stage = 0;
 

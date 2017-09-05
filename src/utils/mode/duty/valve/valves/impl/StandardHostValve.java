@@ -9,6 +9,7 @@ import utils.mode.duty.valve.valves.ValveBase;
 import utils.mode.duty.valve.valves.ValveContext;
 
 /**
+ * 基本的Host阀门
  * Created by gezz on 2017/9/5.
  */
 public class StandardHostValve extends ValveBase implements Valve, Contained {

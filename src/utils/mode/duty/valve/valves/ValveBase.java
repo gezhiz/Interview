@@ -3,6 +3,7 @@ package utils.mode.duty.valve.valves;
 import utils.mode.duty.valve.container.Container;
 
 /**
+ * 阀门基本类
  * Created by gezz on 2017/9/5.
  */
 public abstract class ValveBase implements Valve, Contained {
