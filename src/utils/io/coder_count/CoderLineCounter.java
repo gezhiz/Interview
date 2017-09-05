@@ -1,4 +1,4 @@
-package domain;
+package utils.io.coder_count;
 
 /**
  * Created by gezz on 2017/8/1.

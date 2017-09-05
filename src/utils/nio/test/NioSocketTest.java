@@ -1,4 +1,4 @@
-package main;
+package utils.nio.test;
 
 import org.junit.Test;
 import utils.nio.NioSocketUtils;

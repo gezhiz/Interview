@@ -1,14 +1,14 @@
-package main;
+package utils.io.coder_count;
 
 import org.junit.Test;
-import utils.SrcCoderLineCounter;
+import utils.io.coder_count.SrcCoderLineCounter;
 
 import java.io.*;
 
 /**
  * Created by gezz on 2017/8/1.
  */
-public class MainTest {
+public class CoderCounterTest {
     /**gasgseg**/
     @Test
 

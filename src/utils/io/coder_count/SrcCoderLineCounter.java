@@ -1,6 +1,4 @@
-package utils;
-
-import domain.CoderLineCounter;
+package utils.io.coder_count;
 
 import java.io.*;
 
