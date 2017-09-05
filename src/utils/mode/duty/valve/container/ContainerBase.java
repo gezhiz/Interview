@@ -18,6 +18,8 @@ public abstract class ContainerBase implements Pipeline, Container {
     private String name = "unknow name engine";
     private Container parent = null;
     private Map<String, Container> children = new HashMap<String, Container>();
+
+    //每一个Container都有一个basicValve，用来实现将责任流入下一个节点（Pipline）
     private Pipeline pipeline = new StandardPipeline(this);
 
     @Override
