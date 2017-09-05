@@ -1,8 +1,8 @@
 package utils.mode.duty.valve.container;
 
 import utils.mode.duty.valve.valves.Contained;
-import utils.mode.duty.valve.valves.Pipeline;
-import utils.mode.duty.valve.valves.impl.StandardPipeline;
+import utils.mode.duty.valve.pipline.Pipeline;
+import utils.mode.duty.valve.pipline.StandardPipeline;
 import utils.mode.duty.valve.valves.Valve;
 import utils.mode.duty.valve.domain.DutyBean;
 

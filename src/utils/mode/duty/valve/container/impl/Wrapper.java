@@ -4,9 +4,7 @@ import utils.mode.duty.valve.container.Container;
 import utils.mode.duty.valve.container.ContainerBase;
 import utils.mode.duty.valve.domain.DutyBean;
 import utils.mode.duty.valve.domain.Servlet;
-import utils.mode.duty.valve.valves.Pipeline;
-
-import java.util.Map;
+import utils.mode.duty.valve.pipline.Pipeline;
 
 /**
  * 最底层容器，在Tomcat4里面用Wrapper包装servlet,用invoke调用servlet对象的service方法

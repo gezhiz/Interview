@@ -1,6 +1,7 @@
-package utils.mode.duty.valve.valves;
+package utils.mode.duty.valve.pipline;
 
 import utils.mode.duty.valve.domain.DutyBean;
+import utils.mode.duty.valve.valves.Valve;
 
 /**
  * 责任链核心接口，每一个责任节点都必须有一个Pipeline对象，
