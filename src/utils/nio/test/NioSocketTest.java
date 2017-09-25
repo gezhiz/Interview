@@ -14,12 +14,12 @@ public class NioSocketTest {
 
     @Test
     public void testServer() {
-        NioSocketUtils.server(8888);
+        NioSocketUtils.server(8080);
     }
 
     @Test
     public void testClient() {
-        SocketAddress socketAddress = new InetSocketAddress("localhost",8888);
+        SocketAddress socketAddress = new InetSocketAddress("localhost",8080);
         try {
             NioSocketUtils.client(socketAddress);
         } catch (IOException e) {

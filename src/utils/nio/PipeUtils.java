@@ -6,6 +6,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.Pipe;
 
 /**
+ * Pipe有一个source通道和一个sink通道。数据会被写到sink通道，从source通道读取。
  * Created by gezz on 2017/8/14.
  */
 public class PipeUtils {
